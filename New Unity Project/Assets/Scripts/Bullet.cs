@@ -10,10 +10,14 @@ public class Bullet : MonoBehaviour
     //variable del vector para la direccion
     public Vector2 direction;
 
+    //variable float livintTime para el tiempo que estara la bala y despues explote
+    public float livintTime = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //destruye el objeto despues de el livinTime que pase que son 2f
+        Destroy(gameObject,livintTime);
     }
 
     // Update is called once per frame
